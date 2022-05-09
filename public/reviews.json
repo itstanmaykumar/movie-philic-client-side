@@ -1,0 +1,29 @@
+[
+    {
+        "_id": "618fc5c6e03a55960b309686",
+        "id": 0,
+        "img": "https://i.ibb.co/42LvjMx/default.png",
+        "name": "Tanmay Kumar",
+        "email": "itstanmaykumar@gmail.com",
+        "feed": "Excellent Service... The team are really informed and go the extra mile at every stage. Thank you so much.",
+        "rate": 3
+    },
+    {
+        "_id": "618fce43e03a55960b309689",
+        "id": 1,
+        "img": "https://i.ibb.co/42LvjMx/default.png",
+        "name": "Jane Doe",
+        "email": "tanmaykumar.cse@gmail.com",
+        "feed": " A fantastic organisation! Great cutomer support from beginning to end of the process. I would recommend them unreservedly.",
+        "rate": 5
+    },
+    {
+        "_id": "61921a84080710bcdef8769d",
+        "id": 2,
+        "img": "https://i.ibb.co/42LvjMx/default.png",
+        "name": "Shona Banu",
+        "email": "shona@banu.com",
+        "feed": "Not good value Wouldn't recommend. This was so bad that I tried to call the company when I got my order.",
+        "rate": 2
+    }
+]

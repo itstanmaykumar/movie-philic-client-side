@@ -5,70 +5,79 @@
         "supplier": "Christopher Nolan",
         "img": "https://i.ibb.co/LNhTLmg/Interstellar.jpg",
         "text": "he adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
-        "price": 3.99
+        "price": 3.99,
+        "quantity": 14
     },
     {
         "id": 1,
         "title": "Arrival (2016)",
         "supplier": "Denis Villeneuve",
         "img": "https://i.ibb.co/1nCYQjw/Arrival-2016.jpg",
-        "text": "Taking place after alien crafts land around the world, an expert linguist is recruited by the military to determine whether they come in peace or are a threat.",
-        "price": 1.99
+        "text": "Taking place after alien crafts land around the world, an expert linguist is recruited by the military to determine whether they come in peace or are a threat. They have come to Earth in a mysterious spaceship.",
+        "price": 1.99,
+        "quantity": 104
     },
     {
         "id": 2,
         "title": "Gravity (2013)",
         "supplier": "Alfonso Cuarón",
         "img": "https://i.ibb.co/mJPg8ZM/Gravity-2013.jpg",
-        "text": "Dr. Ryan Stone, a brilliant medical engineer on her first Shuttle mission, with veteran astronaut Matt Kowalsky in command of his last flight before retiring. But on a seemingly routine spacewalk, disaster strikes. The Shuttle is destroyed, leaving Stone and Kowalsky completely alone-tethered to nothing but each other and spiraling out into the blackness of space. The deafening silence tells them they have lost any link to Earth and any chance for rescue. As fear turns to panic, every gulp of air eats away at what little oxygen is left. But the only way home may be to go further out into the terrifying expanse of space.",
-        "price": 2.99
+        "text": "Dr. Ryan Stone, a brilliant medical engineer on her first Shuttle mission, with veteran astronaut Matt Kowalsky in command of his last flight before retiring. But on a seemingly routine spacewalk, disaster strikes.",
+        "price": 2.99,
+        "quantity": 17
     },
     {
         "id": 3,
         "title": "The Martian (2015)",
         "supplier": "Ridley Scott",
         "img": "https://i.ibb.co/642yhNZ/The-Martian-2015.jpg",
-        "text": "During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile planet. With only meager supplies, he must draw upon his ingenuity, wit and spirit to subsist and find a way to signal to Earth that he is alive.",
-        "price": 3.99
+        "text": "During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile planet.",
+        "price": 3.99,
+        "quantity": 67
     },
     {
         "id": 4,
         "title": "First Man (2018)",
         "supplier": "Damien Chazelle",
         "img": "https://i.ibb.co/DkQhCMc/First-Man-2018.jpg",
-        "text": "A look at the life of the astronaut, Neil Armstrong, and the legendary space mission that led him to become the first man to walk on the Moon on July 20, 1969.",
-        "price": 4.49
+        "text": "An American NASA test pilot, and his fellow Apollo Program team-members zip themselves into insulated suits and set out on a mission to land on the moon. A look at the life of the astronaut, Neil Armstrong.",
+        "price": 4.49,
+        "quantity": 19
     },
     {
         "id": 5,
         "title": "Prometheus (2012)",
         "supplier": "Ronald Shusett",
         "img": "https://i.ibb.co/C6wvWLr/Prometheus-2012.jpg",
-        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to the darkest corners of the universe. There, they must fight a terrifying battle to save the future of the human race.",
-        "price": 3.99
+        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to corners of the universe. There, they must fight a terrifying battle to save the future of the human race.",
+        "price": 3.99,
+        "quantity": 33
     },
     {
         "id": 6,
         "title": "Prometheus (2012)",
         "supplier": "Ronald Shusett",
         "img": "https://i.ibb.co/C6wvWLr/Prometheus-2012.jpg",
-        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to the darkest corners of the universe. There, they must fight a terrifying battle to save the future of the human race.",
-        "price": 3.99
+        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to of the universe. There, they must fight a terrifying battle to save the future of the human race.",
+        "price": 3.99,
+        "quantity": 33
     },
     {
         "id": 7,
         "title": "Prometheus (2012)",
         "supplier": "Ronald Shusett",
         "img": "https://i.ibb.co/C6wvWLr/Prometheus-2012.jpg",
-        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to the darkest corners of the universe. There, they must fight a terrifying battle to save the future of the human race.",
-        "price": 3.99
+        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to of the universe. There, they must fight a terrifying battle to save the future of the human race.",
+        "price": 3.99,
+        "quantity": 33
     },
     {
         "id": 8,
         "title": "Prometheus (2012)",
         "supplier": "Ronald Shusett",
         "img": "https://i.ibb.co/C6wvWLr/Prometheus-2012.jpg",
-        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to the darkest corners of the universe. There, they must fight a terrifying battle to save the future of the human race.",
-        "price": 3.99
+        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to of the universe. There, they must fight a terrifying battle to save the future of the human race.",
+        "price": 3.99,
+        "quantity": 33
     }
 ]

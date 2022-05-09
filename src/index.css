@@ -11,6 +11,10 @@
   background-color: #fff3f3;
 }
 
+.bg-main {
+  background-color: #FF6E6D;
+}
+
 .btn-main {
   background-color: #FF6E6D;
   transition-duration: .2s;
@@ -85,5 +89,5 @@
 }
 
 .of-x-h {
-  overflow-x: hidden
+  overflow-x: hidden !important;
 }
