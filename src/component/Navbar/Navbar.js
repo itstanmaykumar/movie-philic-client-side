@@ -55,11 +55,15 @@ const Navbar = () => {
                         {
                             user?.uid ? (
                                 <li className="nav-item">
-                                    <Link onClick={handleSignout} className="nav-link fw-bolder" to="/">Sign Out</Link>
+                                    <Link onClick={handleSignout} className="btn btn-outline-main" to="/home">
+                                        Sign Out <i className="fas fa-sign-in-alt"></i>
+                                    </Link>
                                 </li>
                             ) : (
                                 <li className="nav-item">
-                                    <Link className="nav-link fw-bolder" to="/signin">Sign In</Link>
+                                    <Link className="btn btn-outline-main" to="/signin">
+                                        Sign In <i className="fas fa-sign-in-alt"></i>
+                                    </Link>
                                 </li>
                             )}
                     </ul>
