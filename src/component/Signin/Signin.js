@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import { auth } from "../../firebase.init";
 import GoogleLogo from "../../media/google.svg";
 import signinImg from '../../media/signin.png';
@@ -125,6 +125,8 @@ const Signin = () => {
                             Sign In
                         </button>
                     </form>
+
+                    <ToastContainer />
                     <p className='mt-2'>
                         New to posterisks?{" "}
                         <Link to="/signup">Create New Account</Link>
