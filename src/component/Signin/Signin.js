@@ -88,9 +88,10 @@ const Signin = () => {
 
     useEffect(() => {
         if (user || googleUser) {
+            console.log(from);
             navigate(from, { replace: true });
         }
-    }, [user]);
+    }, [user, googleUser]);
 
     return (
         <div className='container my-5'>

@@ -6,7 +6,6 @@ import logo from '../../media/logo.png';
 
 const Navbar = () => {
     const [user, setUser] = useState({});
-    console.log(user.displayName);
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {

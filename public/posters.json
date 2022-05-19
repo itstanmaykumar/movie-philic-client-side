@@ -4,7 +4,7 @@
         "title": "Interstellar (2014)",
         "supplier": "Christopher Nolan",
         "img": "https://i.ibb.co/LNhTLmg/Interstellar.jpg",
-        "text": "he adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage.",
+        "text": " The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage. ",
         "price": 3.99,
         "quantity": 14
     },
@@ -19,12 +19,12 @@
     },
     {
         "id": 2,
-        "title": "Gravity (2013)",
-        "supplier": "Alfonso Cuarón",
-        "img": "https://i.ibb.co/mJPg8ZM/Gravity-2013.jpg",
-        "text": "Dr. Ryan Stone, a brilliant medical engineer on her first Shuttle mission, with veteran astronaut Matt Kowalsky in command of his last flight before retiring. But on a seemingly routine spacewalk, disaster strikes.",
-        "price": 2.99,
-        "quantity": 17
+        "title": "WALL·E (2008)",
+        "supplier": "Andrew Stanton",
+        "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
+        "text": "WALL·E is the last robot left on an Earth that has been overrun with garbage and all humans have fled to outer space. When a ship arrives with a sleek new type of robot, WALL·E thinks he's finally found a friend.",
+        "price": 9.29,
+        "quantity": 95
     },
     {
         "id": 3,
@@ -46,38 +46,38 @@
     },
     {
         "id": 5,
-        "title": "Prometheus (2012)",
-        "supplier": "Ronald Shusett",
-        "img": "https://i.ibb.co/C6wvWLr/Prometheus-2012.jpg",
-        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to corners of the universe. There, they must fight a terrifying battle to save the future of the human race.",
-        "price": 3.99,
+        "title": "Moonfall (2022)",
+        "supplier": "Spenser Cohen",
+        "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/odVv1sqVs0KxBXiA8bhIBlPgalx.jpg",
+        "text": "The world stands on the brink of annihilation when a mysterious force knocks the moon from its orbit and sends it hurtling toward a collision course with Earth. Humanity will face the dark side of the Moon.",
+        "price": 2.99,
         "quantity": 33
     },
     {
         "id": 6,
-        "title": "Prometheus (2012)",
-        "supplier": "Ronald Shusett",
-        "img": "https://i.ibb.co/C6wvWLr/Prometheus-2012.jpg",
-        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to of the universe. There, they must fight a terrifying battle to save the future of the human race.",
-        "price": 3.99,
-        "quantity": 33
+        "title": "Don't Look Up (2021)",
+        "supplier": "Adam McKay",
+        "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/th4E1yqsE8DGpAseLiUrI60Hf8V.jpg",
+        "text": "Two low-level astronomers must go to warn humankind of an approaching comet that will destroy planet Earth. Don't Look Up shows us what happens if we wait too long to interrogate our culture and ourselves",
+        "price": 2.59,
+        "quantity": 57
     },
     {
         "id": 7,
-        "title": "Prometheus (2012)",
-        "supplier": "Ronald Shusett",
-        "img": "https://i.ibb.co/C6wvWLr/Prometheus-2012.jpg",
-        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to of the universe. There, they must fight a terrifying battle to save the future of the human race.",
-        "price": 3.99,
-        "quantity": 33
+        "title": "Gravity (2013)",
+        "supplier": "Alfonso Cuarón",
+        "img": "https://i.ibb.co/mJPg8ZM/Gravity-2013.jpg",
+        "text": "Dr. Ryan Stone, a brilliant medical engineer on her first Shuttle mission, with veteran astronaut Matt Kowalsky in command of his last flight before retiring. But on a seemingly routine spacewalk, disaster strikes.",
+        "price": 2.99,
+        "quantity": 17
     },
     {
         "id": 8,
-        "title": "Prometheus (2012)",
-        "supplier": "Ronald Shusett",
-        "img": "https://i.ibb.co/C6wvWLr/Prometheus-2012.jpg",
-        "text": "A team of explorers discover a clue to the origins of mankind on Earth, leading them on a journey to of the universe. There, they must fight a terrifying battle to save the future of the human race.",
+        "title": "Passengers (2016)",
+        "supplier": "Morten Tyldum",
+        "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kq2Dk044ecK73vMsP8ybWSw9ygy.jpg",
+        "text": "A spacecraft traveling to a distant colony planet and transporting thousands of people has a malfunction in its sleep chambers. As a result, two passengers are awakened 90 years early. There is a reason they woke up.",
         "price": 3.99,
-        "quantity": 33
+        "quantity": 72
     }
 ]

@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const ProductItem = ({ poster }) => {
-    const { id, title, supplier, img, text, price, quantity } = poster;
+    const { _id, title, supplier, img, text, price, quantity } = poster;
     let navigate = useNavigate();
 
     const handlePosterDetails = (id) => {
@@ -27,10 +27,10 @@ const ProductItem = ({ poster }) => {
                         <small className='text-secondary'>{text}</small>
                     </div>
                     <div className='py-1 px-3'>
-                        <p>Available: {quantity} Copies</p>
+                        <p>Available Copies: <span className='fw-bolder text-main'>{quantity}</span></p>
                     </div>
                     <div className="pb-3 text-center">
-                        <button onClick={() => handlePosterDetails(id)} className='btn btn-dark shadow' to='/posterdtails'>Update Stock</button>
+                        <button onClick={() => handlePosterDetails(_id)} className='btn btn-dark shadow' to='/posterdtails'>Update Stock</button>
                     </div>
                 </div>
             </div>

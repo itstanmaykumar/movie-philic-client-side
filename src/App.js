@@ -14,6 +14,7 @@ import ProductDetails from './component/Products/ProductDetails';
 import Products from './component/Products/Products';
 import Signin from './component/Signin/Signin';
 import Signup from './component/Signup/Signup';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (

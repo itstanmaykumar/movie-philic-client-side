@@ -6,16 +6,14 @@ const ProductDetails = () => {
     const { posterId } = useParams();
     const navigate = useNavigate();
 
-    const [posters, setPosters] = useState([]);
+    const [poster, setPoster] = useState({});
     useEffect(() => {
-        fetch('/posters.json')
+        fetch(`http://localhost:5000/posters/${posterId}`)
             .then(res => res.json())
-            .then(data => setPosters(data))
-    }, []);
+            .then(data => setPoster(data))
+    }, {});
 
-    const poster = posters[posterId];
-
-    const id = poster?.id;
+    const id = poster?._id;
     const title = poster?.title;
     const img = poster?.img;
     const text = poster?.text;

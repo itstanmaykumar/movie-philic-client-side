@@ -31,7 +31,7 @@ const Products = () => {
                                 :
                                 (
                                     posters.map((poster) => (
-                                        <ProductItem key={poster.id} poster={poster}></ProductItem>
+                                        <ProductItem key={poster._id} poster={poster}></ProductItem>
                                     ))
                                 )
 

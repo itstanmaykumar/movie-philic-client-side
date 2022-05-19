@@ -84,7 +84,7 @@ const Signup = () => {
         if (user || googleUser) {
             navigate(from, { replace: true });
         }
-    }, [user]);
+    }, [user, googleUser]);
 
 
 

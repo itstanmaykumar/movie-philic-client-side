@@ -44,7 +44,7 @@ const AddProduct = () => {
     return (
         <div className="container of-x-h">
             <div className="row">
-                <div className="">
+                <div className="col-lg-6 col-md-10 mx-auto">
                     <div className="ms-lg-3 mt-lg-3 container">
                         <form onSubmit={handleNewProduct} className="px-5 pt-3 pb-5 bg-dark-pro rounded-10 shadow-lg text-main">
                             <h3 className="mt-4 mb-0 text-main">Add A New Product</h3>
