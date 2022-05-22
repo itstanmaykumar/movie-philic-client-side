@@ -7,8 +7,40 @@ import { auth } from '../../firebase.init';
 
 const AddProduct = () => {
 
-    const handleNewProduct = e = {
-        //riyufgu
+    const [user] = useAuthState(auth);
+    let navigate = useNavigate();
+
+    const handleNewProduct = (e) => {
+        e.preventDefault();
+        const title = e.target.title.value;
+        const img = e.target.img.value;
+        const supplier = e.target.supplier.value;
+        const text = e.target.text.value;
+        const price = e.target.price.value;
+        const quantity = e.target.quantity.value;
+        const productAdmin = user?.email;
+        e.target.reset();
+
+        const newProduct = { title, supplier, img, text, price, quantity, productAdmin };
+
+        console.log(newProduct);
+
+        axios.post("https://posterisks.herokuapp.com/posters", newProduct)
+            .then(res => {
+                if (res.data.insertedId) {
+                    const resolveTime = new Promise(resolve => setTimeout(resolve, 500));
+                    toast.promise(
+                        resolveTime,
+                        {
+                            pending: 'Processing...',
+                            success: 'Product is added.'
+                        }
+                    )
+                }
+            });
+
+        alert("Your Feedback Is Posted!! Redirecting you to Dashboard...");
+        navigate(`/posters`);
     }
 
     return (
