@@ -1,6 +1,5 @@
 [
     {
-        "id": 0,
         "title": "Interstellar (2014)",
         "supplier": "Christopher Nolan",
         "img": "https://i.ibb.co/LNhTLmg/Interstellar.jpg",
@@ -9,7 +8,6 @@
         "quantity": 14
     },
     {
-        "id": 1,
         "title": "Arrival (2016)",
         "supplier": "Denis Villeneuve",
         "img": "https://i.ibb.co/1nCYQjw/Arrival-2016.jpg",
@@ -18,7 +16,6 @@
         "quantity": 104
     },
     {
-        "id": 2,
         "title": "WALL·E (2008)",
         "supplier": "Andrew Stanton",
         "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
@@ -27,7 +24,6 @@
         "quantity": 95
     },
     {
-        "id": 3,
         "title": "The Martian (2015)",
         "supplier": "Ridley Scott",
         "img": "https://i.ibb.co/642yhNZ/The-Martian-2015.jpg",
@@ -36,7 +32,6 @@
         "quantity": 67
     },
     {
-        "id": 4,
         "title": "First Man (2018)",
         "supplier": "Damien Chazelle",
         "img": "https://i.ibb.co/DkQhCMc/First-Man-2018.jpg",
@@ -45,7 +40,6 @@
         "quantity": 19
     },
     {
-        "id": 5,
         "title": "Moonfall (2022)",
         "supplier": "Spenser Cohen",
         "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/odVv1sqVs0KxBXiA8bhIBlPgalx.jpg",
@@ -54,7 +48,6 @@
         "quantity": 33
     },
     {
-        "id": 6,
         "title": "Don't Look Up (2021)",
         "supplier": "Adam McKay",
         "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/th4E1yqsE8DGpAseLiUrI60Hf8V.jpg",
@@ -63,7 +56,6 @@
         "quantity": 57
     },
     {
-        "id": 7,
         "title": "Gravity (2013)",
         "supplier": "Alfonso Cuarón",
         "img": "https://i.ibb.co/mJPg8ZM/Gravity-2013.jpg",
@@ -72,7 +64,22 @@
         "quantity": 17
     },
     {
-        "id": 8,
+        "title": "Dune (2021)",
+        "supplier": "Denis Villeneuve",
+        "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lr3cYNDlJcpT1EWzFH42aSIvkab.jpg",
+        "text": "Paul Atreides, a brilliant & gifted boy, arrives on Arrakis after his father accepts the stewardship of the dangerous planet. Chaos ensues after a betrayal as forces clash to control melange, a precious resource.",
+        "price": 3.29,
+        "quantity": 54
+    },
+    {
+        "title": "Avatar (2009)",
+        "supplier": "James Cameron",
+        "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
+        "text": "Jake, who is paraplegic, replaces his twin on the Na'vi inhabited Pandora for a corporate mission. After the natives accept him as one of their own, he becomes torn between following orders and protecting an alien civilization.",
+        "price": 6.99,
+        "quantity": 63
+    },
+    {
         "title": "Passengers (2016)",
         "supplier": "Morten Tyldum",
         "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kq2Dk044ecK73vMsP8ybWSw9ygy.jpg",

@@ -24,7 +24,7 @@ const ProductDetails = () => {
             quantity--;
             var updatedQuantity = { newQuantity: quantity };
             handleQuantityUpdate(updatedQuantity);
-            const resolveTime = new Promise(resolve => setTimeout(resolve, 1000));
+            const resolveTime = new Promise(resolve => setTimeout(resolve, 500));
             toast.promise(
                 resolveTime,
                 {
@@ -38,19 +38,19 @@ const ProductDetails = () => {
 
     const handleAdd = (e) => {
         e.preventDefault();
-        const restockQuantity = parseInt(e.target.cardId.value);
-        e.target.cardId.value = '';
+        const restockQuantity = parseInt(e.target.quantityUpdate.value);
+        e.target.quantityUpdate.value = '';
         var { quantity, ...rest } = poster;
 
         quantity += restockQuantity;
         var updatedQuantity = { newQuantity: quantity };
         handleQuantityUpdate(updatedQuantity);
-        const resolveTime = new Promise(resolve => setTimeout(resolve, 1000));
+        const resolveTime = new Promise(resolve => setTimeout(resolve, 500));
         toast.promise(
             resolveTime,
             {
                 pending: 'Processing...',
-                success: 'Stcok is updated.'
+                success: 'Stock is updated.'
             }
         )
         setPoster({ quantity, ...rest })
@@ -66,7 +66,7 @@ const ProductDetails = () => {
                     <div className='col-md-6'>
                         <h1 className='my-3 fw-bolder'>{poster.title}</h1>
                         <p className='fs-5'><span className='fw-bolder'>Supplier: </span>{poster.supplier}</p>
-                        <h3>Movie Synopsis</h3>
+                        <h5 className='fw-bolder'>Movie Synopsis</h5>
                         <p>{poster.text}</p>
                         <p className='fs-5'><span className='fw-bolder'>Price: </span>${poster.price}</p>
                         <div className='py-1'>
@@ -83,10 +83,10 @@ const ProductDetails = () => {
                         <p className="col-1">or</p>
                         <hr className="col-5 me-1" />
                     </div>
-                    <h4 className=''>Restock of this Poster</h4>
+                    <h4 className=''>Restock this Poster</h4>
                     <form onSubmit={handleAdd} className="mt-3">
                         <label className="form-label">New Product Quantity</label>
-                        <input type="number" min="1" className="form-control" name="cardId" required />
+                        <input type="number" min="1" className="form-control" name="quantityUpdate" required />
                         <button type='submit' className='mt-3 btn btn-dark d-inline-block'>Add <i className="ps-1 fas fa-angle-double-right"></i></button>
                     </form>
                 </div>

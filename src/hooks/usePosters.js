@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 const usePosters = () => {
     const [posters, setPosters] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/posters')
+        fetch('https://posterisks.herokuapp.com/posters')
             .then(res => res.json())
             .then(data => setPosters(data))
     }, []);

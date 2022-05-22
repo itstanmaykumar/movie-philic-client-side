@@ -1,36 +1,44 @@
-import React, { useEffect, useState } from 'react';
+import axios from 'axios';
+import React from 'react';
 import { toast } from 'react-toastify';
+import usePosters from '../../hooks/usePosters';
 
 const ManageProducts = () => {
 
-    const [posters, setPosters] = useState([]);
-    useEffect(() => {
-        fetch('/posters.json')
-            .then(res => res.json())
-            .then(data => setPosters(data))
-    }, []);
+    const [posters, setPosters] = usePosters();
 
-    // const poster = posters[posterId];
+    //console.log(posters);
 
-    // const id = poster?.id;
-    // const title = poster?.title;
-    // const img = poster?.img;
-    // const text = poster?.text;
-    // const supplier = poster?.supplier;
-    // const price = poster?.price;
-    // const quantity = poster?.quantity;
-
-    const deleteProduct = () => toast.success("fg Successful!");
+    const deleteProduct = (id) => {
+        const proceed = window.confirm("Are you sure , you want to delete this product?");
+        if (proceed) {
+            axios.delete(`https://posterisks.herokuapp.com/posters/${id}`)
+                .then(res => {
+                    if (res.data.deletedCount) {
+                        toast.warn("Product is deleted. ");
+                        const remainingPosters = posters.filter(poster => poster._id !== id);
+                        setPosters(remainingPosters);
+                    }
+                })
+        }
+    };
 
     return (
-        <div className="container of-x-h">
-            <div className="row">
-                <div className="ms-lg-3 mt-lg-3 container">
-                    <div className="m-3 py-2 bg-dark-pro container">
+        <div className="container of-x-h pb-5 mb-5">
+            <div className="row pb-5">
+                <h1 className='mt-5 text-center'>Current Inventory Stock</h1>
+                <p className='text-center'>Manage All Product Inventories</p>
+                <div className="bg-dark-pro my-5 rounded-3">
+                    <div className="pt-2">
                         {
                             posters.length === 0 ?
                                 (
-                                    <h3 className="my-5 py-5 text-white text-center"><i className="far fa-folder-open pe-3"></i> Your Cart is Empty</h3>
+                                    <div className="py-5 mb-5 d-flex justify-content-center text-main">
+                                        <h1 mb-5 pb-5>Loading.....</h1>
+                                        <div className="mt-2 ms-2 spinner-border" role="status">
+                                            <span className="sr-only">Loading...</span>
+                                        </div>
+                                    </div>
                                 )
                                 :
                                 (
@@ -45,10 +53,10 @@ const ManageProducts = () => {
                                         <tbody>
                                             {
                                                 posters.map((product) => (
-                                                    <tr key={product.id}>
+                                                    <tr key={product._id}>
                                                         <td>{product.title}</td>
                                                         <td>{product.quantity}</td>
-                                                        <td onClick={() => deleteProduct(product.id)} className="pointer ico text-danger">Delete</td>
+                                                        <td onClick={() => deleteProduct(product._id)} className="pointer ico text-danger">Delete</td>
                                                     </tr>
                                                 ))
                                             }
