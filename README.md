@@ -19,6 +19,7 @@ cinefest provides great deals on our huge selection of posters & prints, with fa
 * React
 * Node
 * Mongodb
+* JWT
 * Axios
 * React Router
 * React Hooks
