@@ -15,6 +15,8 @@ import Products from './component/Products/Products';
 import Signin from './component/Signin/Signin';
 import Signup from './component/Signup/Signup';
 import 'react-toastify/dist/ReactToastify.css';
+import About from './component/About/About';
+import Contact from './component/Contact/Contact';
 
 function App() {
   return (
@@ -49,6 +51,8 @@ function App() {
             <MyProducts></MyProducts>
           </PrivateRoute>
         }></Route>
+        <Route path="/info" element={<About></About>}></Route>
+        <Route path="/contact" element={<Contact></Contact>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/signin" element={<Signin></Signin>}></Route>
         <Route path="/signup" element={<Signup></Signup>}></Route>

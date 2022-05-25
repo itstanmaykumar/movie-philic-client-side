@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -8,6 +9,7 @@ import signinImg from '../../media/signin.png';
 
 
 const Signin = () => {
+
     const [userInfo, setUserInfo] = useState({
         email: "",
         password: "",
@@ -19,7 +21,7 @@ const Signin = () => {
     })
 
     const [signInWithEmail, user, loading, hookError] = useSignInWithEmailAndPassword(auth);
-    const [signInWithGoogle, googleUser, loading2, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser, loadingGoogle, googleError] = useSignInWithGoogle(auth);
 
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -47,13 +49,14 @@ const Signin = () => {
 
     }
 
-    const handleSignin = (e) => {
+    const handleSignin = async (e) => {
         e.preventDefault();
         signInWithEmail(userInfo.email, userInfo.password);
-
     }
+
     const handleGoogle = () => {
         signInWithGoogle();
+        getToken(googleUser);
     }
 
     const handleResetPassword = () => {
@@ -67,28 +70,37 @@ const Signin = () => {
     useEffect(() => {
         const error = hookError || googleError;
         if (error) {
+            // console.log(error.code);
             switch (error?.code) {
                 case "auth/invalid-email":
-                    toast("Invalid Email!");
+                    toast("Invalid email provided, please provide a valid email");
                     break;
 
-                case "auth/invalid-password":
-                    toast("Wrong Password.")
+                case "auth/wrong-password":
+                    toast("Wrong password. Intruder!!")
                     break;
                 default:
-                    toast("Something Went Wrong")
+                    toast("something went wrong")
             }
         }
     }, [hookError, googleError])
 
+    const getToken = async (admin) => {
+        const email = admin?.user?.email;
+        if (email) {
+            const { data } = await axios.post('https://posterisks.herokuapp.com/signin', { email });
+            localStorage.setItem('accessToken', data.accessToken);
+        }
+    };
+
+
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
-
+    const from = location.state?.from?.pathname || "/home";
 
     useEffect(() => {
+        // console.log(googleUser);
         if (user || googleUser) {
-            console.log(from);
             navigate(from, { replace: true });
         }
     }, [user, googleUser]);
@@ -119,8 +131,16 @@ const Signin = () => {
                                 />
                             </div>
                         </div>
+                        {
+                            (loading || loadingGoogle) && (
+                                <button className="btn btn-dark" type="button">
+                                    <span className="me-2 spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                    Loading...
+                                </button>
+                            )
+                        }
                         <div>
-                            <p onClick={handleResetPassword} className="text-primary btn">Forgot Password?</p>
+                            <p onClick={handleResetPassword} className="text-primary btn ps-0">Forgot Password?</p>
                         </div>
                         <button type='submit' className='btn btn-dark d-block w-100'>
                             Sign In

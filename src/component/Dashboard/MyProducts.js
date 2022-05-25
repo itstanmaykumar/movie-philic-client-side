@@ -1,23 +1,34 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import axiosPrivate from '../../api/axiosPrivate';
+import { auth } from '../../firebase.init';
 
 const MyProducts = () => {
     const [posters, setPosters] = useState([]);
+    const [user] = useAuthState(auth);
+    const navigate = useNavigate();
+
     useEffect(() => {
-        fetch('/posters.json')
-            .then(res => res.json())
-            .then(data => setPosters(data))
-    }, []);
-
-    // const poster = posters[posterId];
-
-    // const id = poster?.id;
-    // const title = poster?.title;
-    // const img = poster?.img;
-    // const text = poster?.text;
-    // const supplier = poster?.supplier;
-    // const price = poster?.price;
-    // const quantity = poster?.quantity;
+        const getMyProducts = async () => {
+            const email = user?.email;
+            const url = `https://posterisks.herokuapp.com/myproducts?admin=${email}`;
+            try {
+                const { data } = await axiosPrivate.get(url);
+                setPosters(data);
+            }
+            catch (error) {
+                //console.log(error.message);
+                if (error.response.status === 401 || error.response.status === 403) {
+                    signOut(auth);
+                    navigate('/signin')
+                }
+            }
+        }
+        getMyProducts();
+    }, [user]);
 
     const deleteProduct = () => toast.success("fg Successful!");
 

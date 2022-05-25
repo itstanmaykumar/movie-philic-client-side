@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import usePosters from '../../hooks/usePosters';
+import add from "../../media/add.png";
 
 const ManageProducts = () => {
 
@@ -34,7 +36,7 @@ const ManageProducts = () => {
                             posters.length === 0 ?
                                 (
                                     <div className="py-5 mb-5 d-flex justify-content-center text-main">
-                                        <h1 mb-5 pb-5>Loading.....</h1>
+                                        <h1 className="mb-5">Loading.....</h1>
                                         <div className="mt-2 ms-2 spinner-border" role="status">
                                             <span className="sr-only">Loading...</span>
                                         </div>
@@ -66,6 +68,12 @@ const ManageProducts = () => {
                         }
                     </div>
                 </div>
+            </div>
+            <div className='col-12 mx-auto text-center'>
+                <Link className='btn btn-dark px-4 py-3' to='/addproducts'>
+                    <img width="30" src={add} alt="manage" />
+                    <span className='ps-3 fs-5'>Add A New Product</span>
+                </Link>
             </div>
         </div>
     );

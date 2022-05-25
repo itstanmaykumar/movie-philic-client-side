@@ -18,28 +18,21 @@ const AddProduct = () => {
         const text = e.target.text.value;
         const price = e.target.price.value;
         const quantity = e.target.quantity.value;
-        const productAdmin = user?.email;
+        const admin = user?.email;
         e.target.reset();
 
-        const newProduct = { title, supplier, img, text, price, quantity, productAdmin };
+        const newProduct = { title, supplier, img, text, price, quantity, admin };
 
         console.log(newProduct);
 
         axios.post("https://posterisks.herokuapp.com/posters", newProduct)
             .then(res => {
                 if (res.data.insertedId) {
-                    const resolveTime = new Promise(resolve => setTimeout(resolve, 500));
-                    toast.promise(
-                        resolveTime,
-                        {
-                            pending: 'Processing...',
-                            success: 'Product is added.'
-                        }
-                    )
+                    toast.success("Product is added.");
                 }
             });
 
-        alert("Your Feedback Is Posted!! Redirecting you to Dashboard...");
+        alert("Product is added. Redirecting you to Gallery...");
         navigate(`/posters`);
     }
 
@@ -65,7 +58,7 @@ const AddProduct = () => {
                             </div>
                             <div className="my-4">
                                 <label htmlFor="pPrice" className="form-label">Poster Price</label>
-                                <input name="price" type="number" min='1' className="form-control" id="pPrice" placeholder="Ex- 11.99" required />
+                                <input name="price" type="text" min='1' className="form-control" id="pPrice" placeholder="Ex- 11.99" required />
                             </div>
                             <div className="my-4">
                                 <label htmlFor="pQuantity" className="form-label">Poster Quantity</label>
@@ -73,7 +66,7 @@ const AddProduct = () => {
                             </div>
                             <div className="my-4">
                                 <label htmlFor="Description" className="form-label">Poster Description</label>
-                                <textarea name="text" maxLength="200" type="text" className="form-control" id="Description" placeholder="A Brief Description of The Poster" required />
+                                <textarea name="text" maxLength="250" type="text" className="form-control" id="Description" placeholder="A Brief Description of The Poster" required />
                             </div>
                             <button type="submit" className="mt-4 btn btn-main">Add New Poster</button>
                         </form>

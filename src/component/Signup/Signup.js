@@ -5,6 +5,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from "react-fi
 import { toast } from "react-toastify";
 import { auth } from "../../firebase.init";
 import signupImg from '../../media/signup.png';
+import axios from "axios";
 
 
 
@@ -23,7 +24,7 @@ const Signup = () => {
     const [createUserWithEmailAndPassword, user, loading, hookError] =
         useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-    const [signInWithGoogle, googleUser, loading2, googleError] = useSignInWithGoogle(auth);
+    const [signInWithGoogle, googleUser, loadingGoogle, googleError] = useSignInWithGoogle(auth);
 
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
@@ -53,15 +54,17 @@ const Signup = () => {
 
     const handleSignup = (e) => {
         e.preventDefault();
-        console.log(userInfo);
         createUserWithEmailAndPassword(userInfo.email, userInfo.password);
+        getToken(user);
     };
 
     const handleGoogle = () => {
         signInWithGoogle();
+        getToken(googleUser);
     }
 
     useEffect(() => {
+        console.log(hookError);
         if (hookError) {
             switch (hookError?.code) {
                 case "auth/invalid-email":
@@ -76,16 +79,24 @@ const Signup = () => {
         }
     }, [hookError]);
 
+    const getToken = async (admin) => {
+        const email = admin?.user?.email;
+        if (email) {
+            const { data } = await axios.post('https://posterisks.herokuapp.com/signin', { email });
+            localStorage.setItem('accessToken', data.accessToken);
+        }
+    };
+
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/";
+    const from = location.state?.from?.pathname || "/home";
 
     useEffect(() => {
+        console.log(googleUser);
         if (user || googleUser) {
             navigate(from, { replace: true });
         }
     }, [user, googleUser]);
-
 
 
     return (
@@ -118,6 +129,14 @@ const Signup = () => {
                             Sign Up
                         </button>
                     </form>
+                    {
+                        (loading || loadingGoogle) && (
+                            <button className="btn btn-dark mt-2" type="button">
+                                <span className="me-2 spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                Loading...
+                            </button>
+                        )
+                    }
                     <p className='mt-2'>
                         Already have an account?
                         <Link to="/signin" > Sign in</Link>

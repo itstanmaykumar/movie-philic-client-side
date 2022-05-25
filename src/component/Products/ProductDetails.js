@@ -1,8 +1,9 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import React from 'react';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import usePoster from '../../hooks/usePoster';
+import manage from "../../media/server.png";
 
 const ProductDetails = () => {
     const { posterId } = useParams();
@@ -89,6 +90,12 @@ const ProductDetails = () => {
                         <input type="number" min="1" className="form-control" name="quantityUpdate" required />
                         <button type='submit' className='mt-3 btn btn-dark d-inline-block'>Add <i className="ps-1 fas fa-angle-double-right"></i></button>
                     </form>
+                </div>
+                <div className='col-12 mx-auto text-center'>
+                    <Link className='btn btn-dark px-4 py-3' to='/manageproducts'>
+                        <img width="30" src={manage} alt="manage" />
+                        <span className='ps-3 fs-5'>Manage All Inventories</span>
+                    </Link>
                 </div>
             </div>
         </div>

@@ -53,6 +53,12 @@ const Navbar = () => {
                         <li className="nav-item me-2">
                             <Link className="nav-link" to="/blogs">Blogs</Link>
                         </li>
+                        <li className="nav-item me-2">
+                            <Link className="nav-link" to="/info">Info</Link>
+                        </li>
+                        <li className="nav-item me-2">
+                            <Link className="nav-link" to="/contact">Contact</Link>
+                        </li>
                         {
                             user?.uid &&
                             <li className="nav-item me-2">

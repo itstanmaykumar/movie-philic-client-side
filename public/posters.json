@@ -5,7 +5,8 @@
         "img": "https://i.ibb.co/LNhTLmg/Interstellar.jpg",
         "text": " The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage. ",
         "price": 3.99,
-        "quantity": 14
+        "quantity": 14,
+        "productAdmin": "system"
     },
     {
         "title": "Arrival (2016)",
@@ -13,7 +14,8 @@
         "img": "https://i.ibb.co/1nCYQjw/Arrival-2016.jpg",
         "text": "Taking place after alien crafts land around the world, an expert linguist is recruited by the military to determine whether they come in peace or are a threat. They have come to Earth in a mysterious spaceship.",
         "price": 1.99,
-        "quantity": 104
+        "quantity": 104,
+        "productAdmin": "system"
     },
     {
         "title": "WALL·E (2008)",
@@ -21,7 +23,8 @@
         "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg",
         "text": "WALL·E is the last robot left on an Earth that has been overrun with garbage and all humans have fled to outer space. When a ship arrives with a sleek new type of robot, WALL·E thinks he's finally found a friend.",
         "price": 9.29,
-        "quantity": 95
+        "quantity": 95,
+        "productAdmin": "system"
     },
     {
         "title": "The Martian (2015)",
@@ -29,7 +32,8 @@
         "img": "https://i.ibb.co/642yhNZ/The-Martian-2015.jpg",
         "text": "During a manned mission to Mars, Astronaut Mark Watney is presumed dead after a fierce storm and left behind by his crew. But Watney has survived and finds himself stranded and alone on the hostile planet.",
         "price": 3.99,
-        "quantity": 67
+        "quantity": 67,
+        "productAdmin": "system"
     },
     {
         "title": "First Man (2018)",
@@ -37,7 +41,8 @@
         "img": "https://i.ibb.co/DkQhCMc/First-Man-2018.jpg",
         "text": "An American NASA test pilot, and his fellow Apollo Program team-members zip themselves into insulated suits and set out on a mission to land on the moon. A look at the life of the astronaut, Neil Armstrong.",
         "price": 4.49,
-        "quantity": 19
+        "quantity": 19,
+        "productAdmin": "system"
     },
     {
         "title": "Moonfall (2022)",
@@ -45,7 +50,8 @@
         "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/odVv1sqVs0KxBXiA8bhIBlPgalx.jpg",
         "text": "The world stands on the brink of annihilation when a mysterious force knocks the moon from its orbit and sends it hurtling toward a collision course with Earth. Humanity will face the dark side of the Moon.",
         "price": 2.99,
-        "quantity": 33
+        "quantity": 33,
+        "productAdmin": "system"
     },
     {
         "title": "Don't Look Up (2021)",
@@ -53,7 +59,8 @@
         "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/th4E1yqsE8DGpAseLiUrI60Hf8V.jpg",
         "text": "Two low-level astronomers must go to warn humankind of an approaching comet that will destroy planet Earth. Don't Look Up shows us what happens if we wait too long to interrogate our culture and ourselves",
         "price": 2.59,
-        "quantity": 57
+        "quantity": 57,
+        "productAdmin": "system"
     },
     {
         "title": "Gravity (2013)",
@@ -61,7 +68,8 @@
         "img": "https://i.ibb.co/mJPg8ZM/Gravity-2013.jpg",
         "text": "Dr. Ryan Stone, a brilliant medical engineer on her first Shuttle mission, with veteran astronaut Matt Kowalsky in command of his last flight before retiring. But on a seemingly routine spacewalk, disaster strikes.",
         "price": 2.99,
-        "quantity": 17
+        "quantity": 17,
+        "productAdmin": "system"
     },
     {
         "title": "Dune (2021)",
@@ -69,7 +77,8 @@
         "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/lr3cYNDlJcpT1EWzFH42aSIvkab.jpg",
         "text": "Paul Atreides, a brilliant & gifted boy, arrives on Arrakis after his father accepts the stewardship of the dangerous planet. Chaos ensues after a betrayal as forces clash to control melange, a precious resource.",
         "price": 3.29,
-        "quantity": 54
+        "quantity": 54,
+        "productAdmin": "system"
     },
     {
         "title": "Avatar (2009)",
@@ -77,7 +86,8 @@
         "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jRXYjXNq0Cs2TcJjLkki24MLp7u.jpg",
         "text": "Jake, who is paraplegic, replaces his twin on the Na'vi inhabited Pandora for a corporate mission. After the natives accept him as one of their own, he becomes torn between following orders and protecting an alien civilization.",
         "price": 6.99,
-        "quantity": 63
+        "quantity": 63,
+        "productAdmin": "system"
     },
     {
         "title": "Passengers (2016)",
@@ -85,6 +95,7 @@
         "img": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/kq2Dk044ecK73vMsP8ybWSw9ygy.jpg",
         "text": "A spacecraft traveling to a distant colony planet and transporting thousands of people has a malfunction in its sleep chambers. As a result, two passengers are awakened 90 years early. There is a reason they woke up.",
         "price": 3.99,
-        "quantity": 72
+        "quantity": 72,
+        "productAdmin": "system"
     }
 ]
