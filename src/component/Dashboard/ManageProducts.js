@@ -35,12 +35,10 @@ const ManageProducts = () => {
                         {
                             posters.length === 0 ?
                                 (
-                                    <div className="py-5 mb-5 d-flex justify-content-center text-main">
-                                        <h1 className="mb-5">Loading.....</h1>
-                                        <div className="mt-2 ms-2 spinner-border" role="status">
-                                            <span className="sr-only">Loading...</span>
-                                        </div>
-                                    </div>
+                                    <button className="btn fs-5 text-white pb-2" type="button">
+                                        <span className="me-4 spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                        Loading...
+                                    </button>
                                 )
                                 :
                                 (
@@ -69,7 +67,7 @@ const ManageProducts = () => {
                     </div>
                 </div>
             </div>
-            <div className='col-12 mx-auto text-center'>
+            <div className='col-12 mx-auto text-center mb-5'>
                 <Link className='btn btn-dark px-4 py-3' to='/addproducts'>
                     <img width="30" src={add} alt="manage" />
                     <span className='ps-3 fs-5'>Add A New Product</span>

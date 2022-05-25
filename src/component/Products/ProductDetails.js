@@ -91,7 +91,7 @@ const ProductDetails = () => {
                         <button type='submit' className='mt-3 btn btn-dark d-inline-block'>Add <i className="ps-1 fas fa-angle-double-right"></i></button>
                     </form>
                 </div>
-                <div className='col-12 mx-auto text-center'>
+                <div className='col-12 mx-auto text-center mb-5'>
                     <Link className='btn btn-dark px-4 py-3' to='/manageproducts'>
                         <img width="30" src={manage} alt="manage" />
                         <span className='ps-3 fs-5'>Manage All Inventories</span>

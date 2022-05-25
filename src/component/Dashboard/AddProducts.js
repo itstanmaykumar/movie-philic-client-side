@@ -49,7 +49,7 @@ const AddProduct = () => {
                                 <input name="title" type="text" className="form-control" id="title" defaultValue="Apollo 18 (2011)" required />
                             </div>
                             <div className="my-4">
-                                <label htmlFor="img" className="form-label">Poster Image Url</label>
+                                <label htmlFor="img" className="form-label">Poster Image URL</label>
                                 <input name="img" type="text" className="form-control" id="img" defaultValue="https://i.ibb.co/x8tcWtN/ap18.jpg" required />
                             </div>
                             <div className="my-4">

@@ -26,7 +26,7 @@ const Navbar = () => {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg navbar-light">
+        <nav className="navbar navbar-expand-lg navbar-light pt-3">
             <div className="container">
                 <Link className="navbar-brand" to="/home">
                     <img width="35" src={logo} alt="hashtag logo" />

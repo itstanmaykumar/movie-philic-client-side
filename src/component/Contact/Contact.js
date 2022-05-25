@@ -18,8 +18,8 @@ const Contact = () => {
     }
     return (
         <section className='container pb-5'>
-            <div className='my-5'>
-                <h1 className='mt-5 mb-5 text-center'>Fol<span className='border-bottom border-3'>low Us </span> On</h1>
+            <div className='my-5 py-5'>
+                <h1 className='mt-5 mb-5 text-center text-main'>Fol<span className='border-bottom border-3'>low Us </span> On</h1>
                 <div className="mt-4 mb-5 pb-5 text-center">
                     <Link to="/social"><i className="ico text-dark me-5 fs-3 fab fa-facebook-f"></i></Link>
                     <Link to="/social"><i className="ico text-dark me-5 fs-3 fab fa-twitter"></i></Link>
@@ -27,7 +27,7 @@ const Contact = () => {
                     <Link to="/social"><i className="ico text-dark fs-3 fab fa-linkedin-in"></i></Link>
                 </div>
             </div>
-            <h1 className='text-center my-3'>Go<span className='border-bottom border-3'>t A Que</span>ry?</h1>
+            <h1 className='text-center my-3 text-main'>Go<span className='border-bottom border-3'>t A Que</span>ry?</h1>
             <div className='row justify-content-between align-items-center'>
                 <div className='col-lg-5'>
                     <img className='w-100' src={query}></img>

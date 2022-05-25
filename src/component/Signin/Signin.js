@@ -56,11 +56,10 @@ const Signin = () => {
 
     const handleGoogle = () => {
         signInWithGoogle();
-        getToken(googleUser);
     }
 
     const handleResetPassword = () => {
-        if (userInfo.email != "") {
+        if (userInfo.email !== "") {
             toast.success("Your password reset link was sent to your mail,");
         } else {
             toast("Enter your email.");
@@ -85,14 +84,22 @@ const Signin = () => {
         }
     }, [hookError, googleError])
 
+
     const getToken = async (admin) => {
         const email = admin?.user?.email;
+        //console.log(email);
         if (email) {
             const { data } = await axios.post('https://posterisks.herokuapp.com/signin', { email });
+            //console.log(data.accessToken);
             localStorage.setItem('accessToken', data.accessToken);
+            console.log(localStorage);
         }
     };
 
+    if (googleUser || user) {
+        const admin = googleUser || user;
+        getToken(admin);
+    }
 
     const navigate = useNavigate();
     const location = useLocation();

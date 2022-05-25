@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -20,7 +21,6 @@ const MyProducts = () => {
                 setPosters(data);
             }
             catch (error) {
-                //console.log(error.message);
                 if (error.response.status === 401 || error.response.status === 403) {
                     signOut(auth);
                     navigate('/signin')
@@ -30,7 +30,19 @@ const MyProducts = () => {
         getMyProducts();
     }, [user]);
 
-    const deleteProduct = () => toast.success("fg Successful!");
+    const deleteProduct = (id) => {
+        const proceed = window.confirm("Are you sure , you want to delete this product?");
+        if (proceed) {
+            axios.delete(`https://posterisks.herokuapp.com/posters/${id}`)
+                .then(res => {
+                    if (res.data.deletedCount) {
+                        toast.warn("Product is deleted. ");
+                        const remainingPosters = posters.filter(poster => poster._id !== id);
+                        setPosters(remainingPosters);
+                    }
+                })
+        }
+    };
 
     return (
         <div className="container of-x-h">
@@ -40,7 +52,10 @@ const MyProducts = () => {
                         {
                             posters.length === 0 ?
                                 (
-                                    <h3 className="my-5 py-5 text-white text-center"><i className="far fa-folder-open pe-3"></i> Your Cart is Empty</h3>
+                                    <button className="btn fs-5 text-white" type="button">
+                                        <span className="me-4 spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                                        Loading...
+                                    </button>
                                 )
                                 :
                                 (
@@ -55,10 +70,10 @@ const MyProducts = () => {
                                         <tbody>
                                             {
                                                 posters.map((product) => (
-                                                    <tr key={product.id}>
+                                                    <tr key={product._id}>
                                                         <td>{product.title}</td>
                                                         <td>{product.quantity}</td>
-                                                        <td onClick={() => deleteProduct(product.id)} className="pointer ico text-danger">Delete</td>
+                                                        <td onClick={() => deleteProduct(product._id)} className="pointer ico text-danger">Delete</td>
                                                     </tr>
                                                 ))
                                             }

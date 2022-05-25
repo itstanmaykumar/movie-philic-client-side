@@ -64,7 +64,7 @@ const Signup = () => {
     }
 
     useEffect(() => {
-        console.log(hookError);
+        //console.log(hookError);
         if (hookError) {
             switch (hookError?.code) {
                 case "auth/invalid-email":
@@ -87,12 +87,17 @@ const Signup = () => {
         }
     };
 
+    if (googleUser || user) {
+        const admin = googleUser || user;
+        getToken(admin);
+    }
+
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/home";
 
     useEffect(() => {
-        console.log(googleUser);
+        //console.log(googleUser);
         if (user || googleUser) {
             navigate(from, { replace: true });
         }
