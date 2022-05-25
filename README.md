@@ -12,6 +12,7 @@ cinefest provides great deals on our huge selection of posters & prints, with fa
 * This website offers different movie posters to sell.
 * You can keep yourself updated with the blogs.
 * The home of page contains only 6 filtered course and courses page shows all availabe courses.
+* You can deliver any poster or update the stocks of the posters.
 * You can manage the whole inventory by signing in.
 * You can add or manage your products by signing in.
 
@@ -25,4 +26,4 @@ cinefest provides great deals on our huge selection of posters & prints, with fa
 * React Hooks
 * Firebase
 * Bootstrap
-* CSS (Additional)
+* Custom CSS (Additional)
