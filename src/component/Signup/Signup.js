@@ -55,29 +55,28 @@ const Signup = () => {
     const handleSignup = (e) => {
         e.preventDefault();
         createUserWithEmailAndPassword(userInfo.email, userInfo.password);
-        getToken(user);
     };
 
     const handleGoogle = () => {
         signInWithGoogle();
-        getToken(googleUser);
     }
 
     useEffect(() => {
-        //console.log(hookError);
-        if (hookError) {
-            switch (hookError?.code) {
-                case "auth/invalid-email":
-                    toast("Invalid Email.");
+        const error = hookError || googleError;
+        if (error) {
+            //console.log(error?.code);
+            switch (error?.code) {
+                case "auth/email-already-in-use":
+                    toast.error("Email is already registered.");
                     break;
-                case "auth/invalid-password":
-                    toast("Wrong Password.");
+                case "auth/popup-closed-by-user":
+                    toast.error("Popup closed before login.")
                     break;
                 default:
-                    toast("Something Went Wrong");
+                    toast.error("Something went wrong.");
             }
         }
-    }, [hookError]);
+    }, [hookError, googleError]);
 
     const getToken = async (admin) => {
         const email = admin?.user?.email;

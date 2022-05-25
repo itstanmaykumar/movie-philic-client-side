@@ -23,8 +23,6 @@ const AddProduct = () => {
 
         const newProduct = { title, supplier, img, text, price, quantity, admin };
 
-        console.log(newProduct);
-
         axios.post("https://posterisks.herokuapp.com/posters", newProduct)
             .then(res => {
                 if (res.data.insertedId) {

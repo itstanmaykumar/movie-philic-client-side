@@ -69,17 +69,19 @@ const Signin = () => {
     useEffect(() => {
         const error = hookError || googleError;
         if (error) {
-            // console.log(error.code);
+            //console.log(error?.code);
             switch (error?.code) {
-                case "auth/invalid-email":
-                    toast("Invalid email provided, please provide a valid email");
-                    break;
-
                 case "auth/wrong-password":
-                    toast("Wrong password. Intruder!!")
+                    toast.error("Wrong password. Intruder!!")
+                    break;
+                case "auth/user-not-found":
+                    toast.error("Email is not registered.")
+                    break;
+                case "auth/popup-closed-by-user":
+                    toast.error("Popup closed before login.")
                     break;
                 default:
-                    toast("something went wrong")
+                    toast.error("Something went wrong.")
             }
         }
     }, [hookError, googleError])
@@ -90,9 +92,8 @@ const Signin = () => {
         //console.log(email);
         if (email) {
             const { data } = await axios.post('https://posterisks.herokuapp.com/signin', { email });
-            //console.log(data.accessToken);
             localStorage.setItem('accessToken', data.accessToken);
-            console.log(localStorage);
+            //console.log(localStorage);
         }
     };
 
