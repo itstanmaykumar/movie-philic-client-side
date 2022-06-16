@@ -1,44 +1,44 @@
 * {
   font-family: 'Manrope', sans-serif;
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 .bg-dark-pro {
-  background-color: #0C1E2A;
+  background-color: #130707;
 }
 
 .bg-light-pro {
-  background-color: #fff3f3;
+  background-color: #FFE6E5;
 }
 
 .bg-main {
-  background-color: #FF6E6D;
+  background-color: #FF8B87;
 }
 
 .btn-main {
-  background-color: #FF6E6D;
+  background-color: #FF8B87;
   transition-duration: .2s;
   color: white;
 }
 
 .btn-main:hover {
-  background-color: #FF6E6D;
+  background-color: #FF8B87;
   color: white;
 }
 
 .btn-outline-main {
-  color: #FF6E6D;
-  border: 1px solid #FF6E6D;
+  color: #FF8B87;
+  border: 1px solid #FF8B87;
   transition-duration: .2s;
 }
 
 .btn-outline-main:hover {
-  background-color: #FF6E6D;
+  background-color: #FF8B87;
   color: white;
 }
 
 .text-main {
-  color: #FF6E6D !important;
+  color: #FF8B87 !important;
 }
 
 .text-second {
@@ -46,7 +46,7 @@
 }
 
 .border-main {
-  border-color: #FF6E6D !important;
+  border-color: #FF8B87 !important;
 }
 
 .rounded-20 {
@@ -77,7 +77,7 @@
 }
 
 .ico:hover {
-  color: #FF6E6D !important;
+  color: #FF8B87 !important;
 }
 
 .pointer {
